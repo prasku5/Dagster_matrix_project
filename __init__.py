@@ -1,9 +1,9 @@
 # __init__.py
 
 from dagster import Definitions
-from assets.sql_server_assets import raw_table_1, raw_table_2, raw_table_3
+from assets.sql_server_assets import raw_table_1, raw_table_2, raw_table_3, raw_weekly_table_1
 from assets.s3_assets import s3_file_1, s3_file_2, s3_file_3
-from assets.transformations import transformed_table_1, transformed_table_2, transformed_table_3
+from assets.transformations import transform_raw_table_1, transform_raw_table_2, transform_raw_table_3, transform_raw_weekly_table_1
 from schedules.daily_schedule import daily_schedule
 from schedules.weekly_schedule import weekly_schedule
 from sensors.s3_sensor import s3_sensor
@@ -19,8 +19,10 @@ defs = Definitions(
         raw_table_2,
         raw_table_3,
         raw_weekly_table_1,
-        transformed_table_1,
-        transformed_weekly_table_1,
+        transform_raw_table_1,
+        transform_raw_table_2,
+        transform_raw_table_3,
+        transform_raw_weekly_table_1,
     ],
     schedules=[
         daily_schedule,
