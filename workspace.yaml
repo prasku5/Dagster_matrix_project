@@ -1,0 +1,5 @@
+# workspace.yaml
+
+load_from:
+  - python_file:
+      relative_path: path/to/my_dagster_project/__init__.py
