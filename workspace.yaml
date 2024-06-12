@@ -7,3 +7,7 @@ load_from:
       relative_path: assets/transformation.py
   - python_file:
       relative_path: assets/final.py
+  - python_file:
+      relative_path: jobs/daily_job.py
+  - python_file:
+      relative_path: sensors/s3_sensor.py
