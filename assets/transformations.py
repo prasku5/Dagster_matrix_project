@@ -14,7 +14,7 @@ def write_to_duckdb(table_name, df):
 @asset(partitions_def=daily_partitions)
 def transform_s3_files(context, s3_files) -> Output[dict]:
     partition_date = context.partition_key
-    transformed_data = {}
+    transformed_data = {} # Store transformed data here
     
     for key, df in s3_files.items(): 
         transformed_df = df  # Apply your transformation logic here
