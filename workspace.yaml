@@ -1,5 +1,7 @@
 load_from:
   - python_file:
+      relative_path: repository.py
+  - python_file:
       relative_path: assets/s3_assets.py
   - python_file:
       relative_path: assets/sql_server_assets.py

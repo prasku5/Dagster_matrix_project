@@ -1,3 +1,10 @@
 repository:
   name: DAGSTER_MATRIX_PROJECT
   module: assets
+  module: partitions
+  module: resources
+  module: schedules
+  module: sensors
+  module: schedules
+  module: tests
+
