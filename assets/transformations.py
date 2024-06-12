@@ -16,7 +16,7 @@ def transform_s3_files(context, s3_files) -> Output[dict]:
     partition_date = context.partition_key
     transformed_data = {}
     
-    for key, df in s3_files.items():
+    for key, df in s3_files.items(): 
         transformed_df = df  # Apply your transformation logic here
         table_name = key.split('/')[-1].replace('.csv', '')  # Generate table name from key
         write_to_duckdb(table_name, transformed_df)
@@ -24,7 +24,7 @@ def transform_s3_files(context, s3_files) -> Output[dict]:
 
     return Output(transformed_data, metadata={"partition_date": partition_date})
 
-@asset(partitions_def=daily_partitions)
+@asset(partitions_def=daily_partitions) # This ensures the date range is within the daily partitions
 def transform_raw_table_1(context, raw_table_1) -> Output[pd.DataFrame]:
     partition_date = context.partition_key
     transformed_df = raw_table_1  # Apply your transformation logic here

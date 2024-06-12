@@ -1,5 +1,9 @@
-# workspace.yaml
-
 load_from:
   - python_file:
-      relative_path: path/to/my_dagster_project/__init__.py
+      relative_path: assets/s3_assets.py
+  - python_file:
+      relative_path: assets/sql_server_assets.py
+  - python_file:
+      relative_path: assets/transformation.py
+  - python_file:
+      relative_path: assets/final.py

@@ -19,12 +19,14 @@ def fetch_data_from_s3(bucket_name, key):
 def s3_files(context) -> Output[dict]:
     partition_date = context.partition_key  # Use partition key for S3 key
     file_keys = [
+        
         f"path/to/s3/files/file_1_{partition_date}.csv",
         f"path/to/s3/files/file_2_{partition_date}.csv",
         f"path/to/s3/files/file_3_{partition_date}.csv"
     ]
 
     data_frames = {}
+
     for key in file_keys:
         data = fetch_data_from_s3("my-s3-bucket", key)
         data_frames[key] = data

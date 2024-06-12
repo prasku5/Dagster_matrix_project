@@ -1,0 +1,8 @@
+dagster
+pandas
+boto3
+pyodbc
+duckdb
+pendulum==2.1.2
+dagit
+
